@@ -1,12 +1,10 @@
-# Welcome to the GetAgent Fullstack Developer test!
+## Get Agent Dev Test
 
-The aim of this test is to get a sense of your experience, but without taking up much of your time!
+The Get Agent Dev Test is an application built with React, Styled Components, and Moment.js. The application must accept a property ID, postcode or street and display the matching properties with the corresponding transaction(s).
+
+<img width="1680" alt="Screenshot 2021-03-15 at 06 27 40" src="https://user-images.githubusercontent.com/47988806/111115335-5a18eb00-855c-11eb-920c-0c33bb5807e9.png">
 
 ## Project structure
-
-### API
-
-A simple API has already been setup. This uses data from a sqlite database (included in this project). The API is powered by [Koa](https://github.com/koajs/koa), and uses [Bookshelf](https://bookshelfjs.org/) as an ORM.
 
 To get started:
 
@@ -16,28 +14,24 @@ Inside the "api" folder:
 
 ### Frontend
 
-A simple [CRA](https://create-react-app.dev) skeleton has already been setup. This includes basic configuration so it is ready to load data from the API.
-
 Inside the "frontend" folder: 
 - run `npm install`
 - run `npm start`
 
+### Framework used
 
-## Your mission
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), [Styled Components](https://github.com/styled-components/styled-components) and [Moment.js](https://github.com/moment/moment/). 
 
-The database includes property transactions from 4 London outcodes: "E1", "E2", "E10", "E11". There are 2 tables, one contains a list of properties, and the other contains a list of transactions. These tables are linked, and this relationship is also already setup in the Bookshelf models.
+### API Reference
 
-**Please create a simple interface so a user can search for property transactions and display them.**
+A simple API has already been setup. This uses data from a sqlite database (included in this project). The API is powered by [Koa](https://github.com/koajs/koa), and uses [Bookshelf](https://bookshelfjs.org/) as an ORM.
 
-It should:
-- Accept a property ID, postcode or street
-- Display the matching properties with the corresponding transaction(s).
+### Reflection
 
-You'll need to:
-- Create the interface within the CRA
-- Add a new route to the API to do the searching
+This was a week-long project built as a short technical exercise. Project goal included is to create a React application that will consume data from the SQLite database.  
 
-What we're looking for:
-- Concise code that is sensibly structured. You won't be able to account for every edge case, but please leave a comment where you've taken shortcuts.
-- A simple interface which is cleanly laid out. Use any framework you're comfortable with (we use [react-bootstrap](https://react-bootstrap.github.io/)).
-- Feel free to edit the database structure to improve performance
+Originally I wanted to build an application that allowed a user search for property transactions and display them. I started this process by using the `create-react-app` boilerplate, then adding `Nodemon` to automatically restarting the node application when file changes in the directory are detected, then added `styled-components` to write actual CSS code to style the components, and lastly `Moment.js` to manipulating, and formatting dates.
+
+One of the main challenges I ran into was to pull the information from the API. This leads me to spend a few hours planning a better way to display the information coming from the API. Due to project time constraints, I had to decide a simplified design to demonstrate a better visualisation of the pieces of information that I had available.
+
+At the end of the day, the technologies implemented in this project are React, Styled Components, and Moment.js. I choose to use as fewer frameworks as possible to minimize initial setup and invest more time in diving into weird technological rabbit holes. In the next iteration with more time, I would like to implement a filter to the property list, type safety method and possibly unit tests.
