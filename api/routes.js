@@ -28,7 +28,7 @@ router
 
     const data = response.toJSON()
 
-    return (ctx.body = { count: true, success: true, lrProperty: data })
+    return (ctx.body = { success: true, lrProperty: data })
   })
   .get('street', '/lrProperty/street/:street', async ctx => {
     const street = ctx.params.street.toUpperCase()
