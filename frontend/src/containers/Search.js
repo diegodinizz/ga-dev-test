@@ -105,10 +105,10 @@ export const Search = () => {
     if (option === 'id') {
       url = `/lrProperty/id/${search}`
     } else if (option === 'postcode') {
-      if (search.length > 5) {
-        outcode = search.substring(0, 3)
-      } else {
+      if (search.replace(/\s+/g, '').length <= 5) {
         outcode = search.substring(0, 2)
+      } else {
+        outcode = search.substring(0, 3)
       }
       const incode = search.slice(-3)
       url = `/lrProperty/postcode/${outcode}/${incode}`
